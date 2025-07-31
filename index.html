@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./img/logocons.png">
+</head>
+<body>
+  <div class="btt">
+    <button class="avancar">💰 15</button>
+    <button class="avancar" onclick="toggleDarkMode()">👓</button>
+    
+  </div>
+
+  <h1 class="tit">📘 Documentação do Projeto - Dino</h1>
+
+  <div class="image">
+    <iframe src="https://itch.io/embed/3767395" width="552" height="167" frameborder="0"><a href="https://exerciciosprogramacao.itch.io/dinogdeveloper">Dinogdeveloper by exerciciosprogramacao</a></iframe>
+</iframe>
+  </div>
+
+  <div class="bloco">
+    <h2>🎮 Jogo</h2>
+    <p class="explicacao">👉 Esse jogo foi feito com o tamanho de layout de 1280 x 720.</p>
+    <p class="explicacao">👉 Comece inserindo todos os personagens/objetos e o cenário no jogo.</p>
+    <p class="explicacao">👉 Todos os objetos deste jogo são do tipo Sprite, menos o tempo.</p>
+    <p class="explicacao">👉 O dino deve ter uma animação de correndo e outra de abaixar.</p>
+    <p class="explicacao">👉 O cacto deve ter uma animação de cactos e outra de pássaro.</p>
+    <p class="explicacao">👉 Lembre-se de ajustar as <strong>elevações Z</strong> para que tudo fique certinho na tela.</p>
+    <p class="explicacao">👉 Lembre-se de as <strong>colisões e pontos de imagem</strong> para que tudo fique certinho na tela.</p>
+    <p class="explicacao">👮‍♀️👮‍♂️ <strong>Verifique tudo</strong> certinho antes de continuar!</p>
+    <pre>
+👉 Tipos de objetos
+
+cacto = Sprite 👉 Criar variavel 📦tipo "numero"
+chão = Sprite
+dino = Sprite
+fundo = Sprite
+gameover = Sprite
+nuvem = Sprite
+tempo_de_jogo = Texto 👉 Criar variavel 📦tempo "numero"
+
+👉 Layouts              
+
+jogo
+gameOver
+
+👉 Folhas de Eventos
+
+Folha do jogo
+Folha gameOver
+    </pre>
+  <p class="explicacao">👉 Não esqueça de <strong>criar mais um layout</strong></p>
+  <p class="explicacao">👉 Na animação cacto do cacto devemos deixar a opção de repetir desativada.</p>
+  <p class="explicacao">👉 Na animação pássaro do cacto devemos ativar o repetir.</p>
+  <p class="explicacao">👉 Na animação do chão vamos ativar o repetir.</p>
+  <p class="explicacao">👉 No dino temos a animação de correndo e abaixar. Vamos ativar o repetir das duas.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>🧱 Chão</h2>
+  <pre>
+👉 Comportamentos
+
+Comportamento: Plataforma
+
+Tipo: Plataforma
+  </pre>
+  <p class="explicacao">👉 Chão deve ser plataforma, para o personagem não cair.</p> 
+</div>
+
+  <div class="bloco">
+    <h2>🦖 Personagem</h2>
+    <pre>
+👉 Comportamentos
+
+Comportamento: Personagem de Plataforma
+
+Desativar os controles padrão do teclado: Desativado (□)
+Aceleração: 1500
+Desaceleração: 1500
+Velocidade máxima: 330
+    </pre>
+    <p class="explicacao">👉 Personagem de Plataforma faz o personagem se mover, pular e cair.</p>  
+  </div>
+    <div class="bloco">
+      <h2>🦖 Abaixar</h2>
+    <pre>
+1 - A tecla "C" está pressionada            | Alterar a animação de dino: definir como "abaixando"
+
+2 - A Tecla "C" foi liberada                | Alterar a animação de dino: definir como "correndo"    Adicionar ação  
+ 
+3 - dino está em colisão com cactus         | Alterar para a cena "gameOver"
+</pre>
+    <p class="explicacao">👉 Linha 1 e 2 trocamos a animação que temos dentro do personagem dino.</p>
+    <p class="explicacao">👉 Na linha 3 Se o dino colidir com o ator cacto, vamos para cena game over.</p>  
+
+  </div>
+    <div class="bloco">
+      <h2>🎋 Cacto ☁ Nuvem 🗺 fundo</h2>
+      <pre>
+👉 Comportamentos 
+
+🎋 Comportamento: Movimento Linear
+
+Velocidade no eixo X: -500
+Velocidade no eixo Y: 0
+
+☁ Comportamento: Movimento Linear
+
+Velocidade no eixo X: -100
+Velocidade no eixo Y: 0
+
+🗺 Comportamento: Repetir a cada X segundos
+      </pre>
+      <p class="explicacao">👉 Movimento Linear serve para movermos o cactus e a nuvem para esquerda, por isso esta negativo.</p>
+      <p class="explicacao">👉 Repetir a cada X segundos é uma maneira mais fácil e rapida de usar contador no formato de tempo.</p>
+    </div>
+    <div class="bloco">
+    <h2>🎋 Mover e trocar cacto ☁ mover nuvem</h2>
+    <p class="explicacao">👉 Você cria o temporizador "tempo" na hora de programar o evento em "Nome do temporizador usado para loop, <strong>não equeça que é entre aspas</strong>.</p>
+
+    <pre>
+4 - Repetir a cada 3 segundos 5000 vezes    | Criar objeto cactus na posição 1290; 603 (camada: Camada base)
+    usando o temporizador "tempo"           | Alterar a variável 📦tipo de cactus: definir como RandomWithStep(0,5,1)     
+                                            | Criar objeto nuvem na posição 1246; RandomFloatInRange(45,300) (camada: Camada base)
+                                            | Alterar a velocidade no eixo X de cactus: adicionar -30
+            
+5 - A variável 📦tipo de cactus = 5         | Alterar a animação de cactus: definir como "passaro"
+
+6 - A posição X de cactus < 0               | Deletar cactus
+
+7 - A posição X de nuvem < 0                | Deletar nuvem
+
+8 -                                         | Alterar o frame da animação de cactus: definir como cactus.tipo
+    </pre>
+    <p class="explicacao">👉 Vamos, a cada 3 segundos criar um cactus e uma nuvem.</p>
+    <p class="explicacao">👉 O RandomFloatInRange vai trocar a variável tipo por números de 0 a 5.</p>
+    <p class="explicacao">👉 Temos 5 cactos dentro da nossa animação, equivalentes do 0 ao 4.</p>
+    <p class="explicacao">👉 O número 5 é nosso pássaro, por isso colocamos de (0,5,1). O número 1 significa que pode ser 0 a 5 no intervalo de 1 em 1.</p>        
+    <p class="explicacao">👉 Também estamos aumentando a velocidade do cactus nesse intervalo de 3 segundos.</p>
+    <p class="explicacao">👉 Se a posição do cactus/nuvem dor menor que zero deletamos eles.</p>
+    <p class="explicacao">👉 Na linha 8 não temos evento, o que significa "sempre", sempre estamos atualizando o frame do cactus para o valor da variável.</p>   
+  </div>
+
+<div class="bloco">
+  <h2>⌚ Tempo e 📃 Texto </h2>
+  <p class="explicacao">👉 Você cria o temporizador "tempojogo" na hora de programar o evento em "Nome do temporizador usado para loop, <strong>não equeça que é entre aspas</strong>.</p>
+<pre>
+9 - Repetir a cada 1 segundos 5000 vezes    | Alterar a variável 📦tempo de tempo_de_jogo: adicionar 1
+    usando o temporizador "tempojogo" 
+
+10 -                                        | Alterar o texto de tempo_de_jogo: definir como "Tempo de jogo: " + tempo_de_jogo.Tempo
+</pre>
+<p class="explicacao">👉 A cada 1 segundo aumentamos 1 na variável tempo.</p>
+<p class="explicacao">👉 Por último, precisamos mostrar no texto da tela o tempo. Então, sempre atualizamos o valor do texto para a variável</p>
+</div>
+<div class="bloco">
+  <h2>💰 Desafio Game Over</h2>
+
+  <p class="explicacao">👉 Depois de terminar e testar seu jogo com essas programações faça voltar da tela de game over para o jogo, após esperar 2 segundos.</p>
+  <p class="explicacao">👉 Esse desafio concede 💰 5 moedas.</p>
+  </div>
+<div class="bt">
+  <button class="avancar">
+    <a href="./jogo2.html">Avançar</a>
+</button>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
