@@ -74,10 +74,10 @@ pre {
  
 }
 
-a{
-    /* text-decoration: none; */
+/* a{
+    text-decoration: none;
     color: #333;
-}
+} */
 
 .image{
   max-width: 1200px;
