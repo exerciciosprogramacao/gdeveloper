@@ -97,6 +97,7 @@ pre {
 img{
   max-width: 100%;
   border-radius: 5px;
+  max-height: 600px;
 }
 
 button{
