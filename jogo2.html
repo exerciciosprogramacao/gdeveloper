@@ -16,15 +16,82 @@
   <div class="image">
     <iframe frameborder="0" src="https://itch.io/embed-upload/14941001?color=333333" allowfullscreen="" width="640" height="380"><a href="https://exerciciosprogramacao.itch.io/bitjump">Play BitJump on itch.io</a></iframe>
   </div>
+<br>
+<div class="bloco">
+  <a href="./arquivos/Bitjump sem codigo.zip">Clique aqui para baixar o arquivo do jogo</a>
+</div>
+<hr>
+  <div class="bloco">
+    <h1>Menu</h1>
+    <h2>Programação do Menu</h2>
+    <a href="./img/Imagens jogo 2/menu.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/menu.png" alt=""></a>
+    <p class="explicacao">👉 Controla brilho do texto do menu</p>
+    <p class="explicacao">👉 Se o mouse for clicado no Start o jogo muda de fase</p>
+    <p class="explicacao">👉 Se o mouse for clicado no Quit o jogo fecha (não funciona no navegador)</p>
+    <p class="explicacao">👉 Animação de escala nos botões (hover effect)</p>
+  </div>
+
+<hr>
 
   <div class="bloco">
-    <h2>Jogo</h2>
- <p class="explicacao"></p>
-    <pre>
+    <h1>Fase 1</h1>
+    <h2>Inicio</h2>
+    <a href="./img/Imagens jogo 2/parte 1.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 1.png" alt=""></a>
 
-    </pre>
+    <p class="explicacao">👉 Executa ações quando a cena inicia</p>
+    <p class="explicacao">👉 Configura as armadilhas com animações aleatórias</p> 
+    <p class="explicacao">👉 Pré-carrega os sons do jogo para evitar travamentos</p> 
+    <p class="explicacao">👉 Cria o jogador na posição inicial com escala ajustada</p> 
+    <p class="explicacao">👉 Inicia a música de fundo em loop</p>
+
+    <h2>Coletáveis</h2>
+    <a href="./img/Imagens jogo 2/parte 2.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 2.png" alt=""></a>
+
+    <p class="explicacao">👉 Quando o jogador colide com uma moeda, toca som de coleta</p>
+    <p class="explicacao">👉 Inicia animação de coleta da moeda</p>
+    <p class="explicacao">👉 Após animação terminar, remove a moeda da cena</p>
+
+    <h2>Player</h2>
+    <a href="./img/Imagens jogo 2/parte 3.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 3.png" alt="" srcset=""></a>
+
+    <p class="explicacao">👉 Controla os estados de animação do jogador (correr, pular, cair, parado)</p>
+    <p class="explicacao">👉 Toca som de pulo quando o jogador salta</p>
+    <p class="explicacao">👉 Inverte a direção do personagem conforme se move</p>
+    <p class="explicacao">👉 Verifica se o jogador está vivo antes de executar ações</p>
+
+
+    <a href="./img/Imagens jogo 2/parte 4.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 4.png" alt=""></a>
+
+    <p class="explicacao">👉 Quando o jogador toca em armadilhas, ele morre e toca som de dano</p>
+    <p class="explicacao">👉 Desativa os controles e inicia animação de morte</p>
+    <p class="explicacao">👉 Após 1 segundo, respawna o jogador na posição inicial</p>
+    <p class="explicacao">👉 Toca sons de passos durante a corrida em momentos específicos da animação</p>
+
+    <h2>Armadilhas</h2>
+    <a href="./img/Imagens jogo 2/parte 5.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 5.png" alt=""></a>
+
+    <p class="explicacao">👉 Ativa armadilhas quando o jogador se aproxima</p>
+    <p class="explicacao">👉 Controla animações de ativação/desativação das armadilhas</p>
+    <p class="explicacao">👉 Faz plataformas tremerem e desaparecerem quando colididas</p>
+    <p class="explicacao">👉 Reativa plataformas após 3 segundos com opacidade total</p>
+
+    <h2>Checkpoint</h2>
+    <a href="./img/Imagens jogo 2/parte 6.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 6.png" alt=""></a>
+
+    <p class="explicacao">👉 Quando o jogador toca no checkpoint, salva a posição de respawn</p>
+    <p class="explicacao">👉 Ativa animação de salvamento e toca som de confirmação</p>
+    <p class="explicacao">👉 Marca o checkpoint como ativo para evitar reativação</p>
+
+    <h2>Troca de fase</h2>
+    <a href="./img/Imagens jogo 2/parte 7.png" target="_blank" rel="noopener noreferrer"><img src="./img/Imagens jogo 2/parte 7.png" alt=""></a>
+
+    <p class="explicacao">👉 Quando o jogador entra no portal pressionando "Up", inicia transição de fase</p>
+    <p class="explicacao">👉 Desativa os controles e faz o jogador desaparecer gradualmente</p>
+    <p class="explicacao">👉 Carrega a próxima cena/fase do jogo</p>
+  </div>
+
  
-  <p class="explicacao">👉 Chão deve ser plataforma, para o personagem não cair.</p> 
+  
 </div>
   
 
